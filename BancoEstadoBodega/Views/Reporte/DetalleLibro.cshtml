@@ -1,0 +1,202 @@
+﻿@model BancoEstadoBodega.Models.LibroDiario
+
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DetalleLibro</title>
+</head>
+<body>
+    <div>
+        <h4>LibroDiario</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Destino
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Destino)
+            </dd>
+    
+            <dt>
+                Comuna
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Comuna)
+            </dd>
+    
+            <dt>
+                Fecha Solicitud
+            </dt>
+    
+            <dd>
+                @Convert.ToString(string.Format("{0:dd/MM/yyyy}", Model.FechaSolicitud))
+               
+            </dd>
+    
+            <dt>
+                Fecha Entrega
+            </dt>
+    
+            <dd>
+                @Convert.ToString(string.Format("{0:dd/MM/yyyy}", Model.FechaEntrega))
+            </dd>
+    
+            <dt>
+               Codigo Seguimiento
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CodigoSeguimiento)
+            </dd>
+    
+            <dt>
+                Campaña Obs
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CampañaObs)
+            </dd>
+    
+            <dt>
+                Mandante
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mandante)
+            </dd>
+    
+            <dt>
+                Receptor
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Receptor)
+            </dd>
+    
+            <dt>
+                Bultos
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Bultos)
+            </dd>
+    
+            <dt>
+                Observaciones
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Obs)
+            </dd>
+    
+            <dt>
+                Coste despacho
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.costedespacho)
+            </dd>
+    
+            <dt>
+                Coste Mecanizado
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.costeMeca)
+            </dd>
+    
+            <dt>
+                Total Mecanizado
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TotalMeca)
+            </dd>
+    
+            <dt>
+                Area
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Area.nombre)
+            </dd>
+    
+            <dt>
+                Empresa
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Empresas.Nombre)
+            </dd>
+    
+            <dt>
+                Tipo Empaque
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TipoEmpaque.descripcion)
+            </dd>
+    
+            <dt>
+                Mecanizado
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mecanizado.Descripcion)
+            </dd>
+    
+            <dt>
+                Tipo Campaña
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TipoCampaña.Nombre)
+            </dd>
+    
+            <dt>
+                Traslado Despacho
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TrasladoDespacho.descripcion)
+            </dd>
+    
+            <dt>
+                Valija Interna
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ValijaInterna.Nombre)
+            </dd>
+    
+            <dt>
+                Tipo Despacho
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TipoDespacho.descripcion)
+            </dd>
+    
+            <dt>
+                Tipo Encomienda
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TipoEncomienda.tipoEncomienda)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Volver", "IndexLibro")
+    </p>
+</body>
+</html>
